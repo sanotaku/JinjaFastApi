@@ -1,0 +1,12 @@
+<h1>This is Index Page</h1>
+
+<div id="ret"></div>
+<button id="submit">Click</button>
+
+<script>
+  document.getElementById("submit").addEventListener("click", async () => {
+    const response = await fetch("/api/helthcheck/test")
+    const data = await response.text();
+    console.log(data)
+  })
+</script>
